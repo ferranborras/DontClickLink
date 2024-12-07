@@ -12,7 +12,7 @@ public class DialogueController : MonoBehaviour
 
     [SerializeField]
     private List<DialogueData> dialogueList;
-    private Queue<DialogueData> dialogueQueue;
+    public Queue<DialogueData> dialogueQueue;
 
     // Start is called before the first frame update
     void Start()
@@ -22,11 +22,7 @@ public class DialogueController : MonoBehaviour
         nextButton.SetActive(false);
         background.SetActive(false);
 
-        dialogueQueue = new Queue<DialogueData>();
-        foreach (var dialogue in dialogueList)
-        {
-            dialogueQueue.Enqueue(dialogue);
-        }
+        EnqueueDialogue();
     }
 
     // Update is called once per frame
@@ -34,6 +30,15 @@ public class DialogueController : MonoBehaviour
     {
         if (Input.GetButtonUp("Vertical")) {
             Initialize();
+        }
+    }
+
+    public void EnqueueDialogue()
+    {
+        dialogueQueue = new Queue<DialogueData>();
+        foreach (var dialogue in dialogueList)
+        {
+            dialogueQueue.Enqueue(dialogue);
         }
     }
 
