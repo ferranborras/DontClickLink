@@ -33,6 +33,7 @@ public class CallTimer : MonoBehaviour
             timer = 10;
             newCall = Instantiate(callScreenPrefab, gameObject.GetComponent<RectTransform>().localPosition, Quaternion.identity);
             newCall.transform.SetParent(GetComponent<RectTransform>());
+            newCall.gameObject.GetComponent<RectTransform>().localPosition = Vector3.zero;
             newCall.gameObject.GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1f);
             if (Random.Range(0, 101) > 50)
             {
@@ -64,10 +65,16 @@ public class CallTimer : MonoBehaviour
     {
         if (fraud)
         {
+            if (dialogs[dialogs.Length - 1].GetComponent<DialogueController>().dialogueQueue.Count <= 0)
+                dialogs[dialogs.Length - 1].GetComponent<DialogueController>().EnqueueDialogue();
+
             dialogs[dialogs.Length - 1].GetComponent<DialogueController>().Initialize();
         }
         else
         {
+            if (dialogs[callIndex].GetComponent<DialogueController>().dialogueQueue.Count <= 0)
+                dialogs[callIndex].GetComponent<DialogueController>().EnqueueDialogue();
+
             dialogs[callIndex].GetComponent<DialogueController>().Initialize();
         }
     }

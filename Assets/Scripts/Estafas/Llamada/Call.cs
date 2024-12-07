@@ -16,7 +16,7 @@ public class Call : MonoBehaviour
         if (isFraud)
         {
             Debug.Log("Has caído en una estafa");
-            //Añadir punto positivo al tablón de anuncios
+            //Añadir punto negativo al tablón de anuncios
         }
         else
         {
@@ -24,6 +24,8 @@ public class Call : MonoBehaviour
             //Activar diálogo corto
         }
         transform.parent.gameObject.GetComponent<CallTimer>().ShowDialog(isFraud);
+        transform.parent.gameObject.GetComponent<CallTimer>().ResetTimer();
+        Destroy(gameObject);
     }
 
     public void Hang()
@@ -31,7 +33,7 @@ public class Call : MonoBehaviour
         if (isFraud)
         {
             Debug.Log("Has evitado una llamada estafa");
-            //Añadir punto negativo al tablón de anuncios
+            //Añadir punto positivo al tablón de anuncios
         }
         transform.parent.gameObject.GetComponent<CallTimer>().ResetTimer();
         Destroy(gameObject);
