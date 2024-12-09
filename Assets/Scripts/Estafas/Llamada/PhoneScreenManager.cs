@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class CallTimer : MonoBehaviour
+public class PhoneScreenManager : MonoBehaviour
 {
     public Call callScreenPrefab;
     public float timer;
     public GameObject[] dialogs;
+    public GameObject callTextPrefab;
+    public GameObject callList;
+    public GameObject[] phoneScreens;
 
     bool ringing;
     int callIndex;
@@ -29,23 +32,31 @@ public class CallTimer : MonoBehaviour
 
         if (timer <= 0 && !ringing)
         {
+            GameObject newCallText;
             ringing = true;
             timer = 10;
             newCall = Instantiate(callScreenPrefab, gameObject.GetComponent<RectTransform>().localPosition, Quaternion.identity);
             newCall.transform.SetParent(GetComponent<RectTransform>());
             newCall.gameObject.GetComponent<RectTransform>().localPosition = Vector3.zero;
             newCall.gameObject.GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1f);
+
+            newCallText = Instantiate(callTextPrefab, Vector3.zero, Quaternion.identity);
+            newCallText.transform.SetParent(callList.GetComponent<RectTransform>());
+            newCallText.GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1f);
+
             if (Random.Range(0, 101) > 50)
             {
                 newCall.isFraud = true;
                 callIndex = Random.Range(0, fraudCalls.Length);
                 newCall.callerText.GetComponent<TextMeshProUGUI>().text = fraudCalls[callIndex];
+                newCallText.GetComponent<TextMeshProUGUI>().text = fraudCalls[callIndex];
             }
             else
             {
                 newCall.isFraud = false;
                 callIndex = Random.Range(0, goodCalls.Length);
                 newCall.callerText.GetComponent<TextMeshProUGUI>().text = goodCalls[callIndex];
+                newCallText.GetComponent<TextMeshProUGUI>().text = goodCalls[callIndex];
             }
         }
 
@@ -77,5 +88,20 @@ public class CallTimer : MonoBehaviour
 
             dialogs[callIndex].GetComponent<DialogueController>().Initialize();
         }
+    }
+
+    public void ShowCallsScreen()
+    {
+        phoneScreens[1].SetActive(true);
+    }
+
+    public void ShowContactsScreen()
+    {
+        phoneScreens[2].SetActive(true);
+    }
+
+    public void BackToMain(int index)
+    {
+        phoneScreens[index].SetActive(false);
     }
 }
