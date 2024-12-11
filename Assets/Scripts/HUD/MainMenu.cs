@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
     GameObject exitButton;
 
     public GameObject optionsMenu;
+    public GameObject levelChanger;
 
     void Start()
     {
@@ -20,7 +21,8 @@ public class MainMenu : MonoBehaviour
 
     public void OnPlayPressed()
     {
-        SceneManager.LoadScene("TestScene");
+        levelChanger.SetActive(true);
+        levelChanger.GetComponent<LevelChanger>().FadeToNextLevel();
     }
 
     public void OnOptionsPressed()

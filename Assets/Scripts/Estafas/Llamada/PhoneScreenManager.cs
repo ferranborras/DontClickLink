@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PhoneScreenManager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class PhoneScreenManager : MonoBehaviour
     public GameObject callTextPrefab;
     public GameObject callList;
     public GameObject[] phoneScreens;
+    public Sprite[] callIcons, pixtagramIcons;
+    public PointManager pointsTable;
 
     bool ringing;
     int callIndex;
@@ -21,7 +24,7 @@ public class PhoneScreenManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timer = 5;
+        ResetTimer();
         ringing = false;
     }
 
@@ -29,6 +32,11 @@ public class PhoneScreenManager : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
+
+        if (Input.GetKeyDown(KeyCode.L)) //Para activar la llamada en cualquier momento para testear con la L
+        {
+            timer = 0;
+        }
 
         if (timer <= 0 && !ringing)
         {
@@ -57,6 +65,11 @@ public class PhoneScreenManager : MonoBehaviour
                 callIndex = Random.Range(0, goodCalls.Length);
                 newCall.callerText.GetComponent<TextMeshProUGUI>().text = goodCalls[callIndex];
                 newCallText.GetComponent<TextMeshProUGUI>().text = goodCalls[callIndex];
+            }
+
+            if (phoneScreens[0].transform.GetChild(1).GetComponent<Button>().image.sprite == callIcons[0])
+            {
+                phoneScreens[0].transform.GetChild(1).GetComponent<Button>().image.sprite = callIcons[1];
             }
         }
 
@@ -93,6 +106,10 @@ public class PhoneScreenManager : MonoBehaviour
     public void ShowCallsScreen()
     {
         phoneScreens[1].SetActive(true);
+        if (phoneScreens[0].transform.GetChild(1).GetComponent<Button>().image.sprite == callIcons[1])
+        {
+            phoneScreens[0].transform.GetChild(1).GetComponent<Button>().image.sprite = callIcons[0];
+        }
     }
 
     public void ShowContactsScreen()
@@ -100,8 +117,22 @@ public class PhoneScreenManager : MonoBehaviour
         phoneScreens[2].SetActive(true);
     }
 
+    public void ShowPixtagramScreen()
+    {
+        phoneScreens[3].SetActive(true);
+        if (phoneScreens[0].transform.GetChild(3).GetComponent<Button>().image.sprite == pixtagramIcons[1])
+        {
+            phoneScreens[0].transform.GetChild(3).GetComponent<Button>().image.sprite = pixtagramIcons[0];
+        }
+    }
+
     public void BackToMain(int index)
     {
         phoneScreens[index].SetActive(false);
+    }
+
+    public void AddPoint(bool positive)
+    {
+        pointsTable.AddPoint(positive, 1);
     }
 }
