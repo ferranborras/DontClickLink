@@ -19,11 +19,11 @@ public class PcController : MonoBehaviour
     }
 
     public void Display(GameObject window) {
-        Transform child;
+        GameObject child;
         WindowController childScript;
         for (int i = 0; i < transform.childCount; i++)
         {
-            child = transform.GetChild(i);
+            child = transform.GetChild(i).gameObject;
             childScript = child.GetComponent<WindowController>();
             if (childScript != null) {
                 childScript.Display(child == window);
