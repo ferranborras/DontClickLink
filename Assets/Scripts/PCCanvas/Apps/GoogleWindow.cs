@@ -7,12 +7,16 @@ public class GoogleWindow : MonoBehaviour
     public enum WindowState {
         home,
         results,
-        shop,
+        gameWeb,
+        badGameWeb,
+        webPeor
     }
 
     public GameObject home;
     public GameObject searchResults;
-    public GameObject shopWeb;
+    public GameObject gameWeb;
+    public GameObject badGameWeb;
+    public GameObject webPeor;
 
     private WindowState state;
 
@@ -32,6 +36,28 @@ public class GoogleWindow : MonoBehaviour
         state = s;
         home.SetActive(state == WindowState.home);
         searchResults.SetActive(state == WindowState.results);
-        shopWeb.SetActive(state == WindowState.shop);
+        gameWeb.SetActive(state == WindowState.gameWeb);
+        badGameWeb.SetActive(state == WindowState.badGameWeb);
+        webPeor.SetActive(state == WindowState.webPeor);
+    }
+
+    public void StateHome() {
+        state = WindowState.home;
+        ChangeState(state);
+    }
+
+    public void StateBadWeb() {
+        state = WindowState.badGameWeb;
+        ChangeState(state);
+    }
+
+    public void StateGameWeb() {
+        state = WindowState.gameWeb;
+        ChangeState(state);
+    }
+
+    public void StateWebPeor() {
+        state = WindowState.webPeor;
+        ChangeState(state);
     }
 }

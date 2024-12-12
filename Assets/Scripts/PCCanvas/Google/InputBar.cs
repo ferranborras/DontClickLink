@@ -25,9 +25,9 @@ public class InputBar : MonoBehaviour
             inputField.text = simulatedText;
     }
 
-    public void Search() {
+    public void Search(GoogleWindow googleScript) {
         if (inputField.text.Length == simulatedText.Length) {
-            print("cositas");
+            googleScript.ChangeState(GoogleWindow.WindowState.results);
         }
     }
 }
