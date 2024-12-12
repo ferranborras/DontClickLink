@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LaptopController : MonoBehaviour
+public class ZoomController : MonoBehaviour
 {
     [SerializeField] private GameObject zoomPosition;
     [SerializeField] private MouseController cursor;
+    [SerializeField] private float camZoom;
     private CameraController cam;
-
+    [SerializeField] private bool isLaptop;
+    public SoundManager sound;
 
     // Start is called before the first frame update
     void Start()
@@ -17,8 +19,16 @@ public class LaptopController : MonoBehaviour
 
     void OnMouseOver()
     {
-        cam.ZoomIn(zoomPosition.transform.position, 2);
-        cursor.ChangeSprite(MouseController.Sprites.cursor);
+        cam.ZoomIn(zoomPosition.transform.position, camZoom);
+        cursor.ChangeSprite(isLaptop ? MouseController.Sprites.cursor : MouseController.Sprites.finger);
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            if (isLaptop)
+                sound.PlayClickSound();
+            else
+                sound.PlayTapSound();
+        }
     }
 
     void OnMouseExit()

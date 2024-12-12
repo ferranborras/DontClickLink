@@ -26,12 +26,12 @@ public class DialogueController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         if (Input.GetButtonUp("Vertical")) {
             Initialize();
         }
-    }
+    }*/
 
     public void EnqueueDialogue()
     {

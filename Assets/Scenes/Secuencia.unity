@@ -614,16 +614,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625990587}
-  m_LocalRotation: {x: 0, y: 0, z: -0.07855478, w: 0.9969098}
+  m_LocalRotation: {x: 0, y: 0, z: 0.011082653, w: 0.9999386}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 181464105}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -9.011}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.27}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13, y: -2}
+  m_AnchoredPosition: {x: 8.51, y: 3.54}
   m_SizeDelta: {x: 272.0743, y: 114.9281}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &625990589
@@ -646,7 +646,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xBFHas probado el nuevo juego gratis Craftmine?"
+  m_text: "\xBFHas probado el nuevo juego gratis Fantasy League?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -1596,7 +1596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2889296002868976897, guid: efc67d06bea7a3b43aed929b7d25b143, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7774818725535265500, guid: efc67d06bea7a3b43aed929b7d25b143, type: 3}
       propertyPath: m_LocalPosition.x
