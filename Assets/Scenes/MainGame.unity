@@ -1110,6 +1110,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1181956106}
+        m_TargetAssemblyTypeName: PointManager, Assembly-CSharp
+        m_MethodName: AddNegative
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &91860006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2105,7 +2117,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 162402072}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1648061314}
+        m_TargetAssemblyTypeName: LevelChanger, Assembly-CSharp
+        m_MethodName: FadeToNextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &162402072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7534,6 +7558,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1181956106}
+        m_TargetAssemblyTypeName: PointManager, Assembly-CSharp
+        m_MethodName: AddNegative
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &766773751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7891,10 +7927,10 @@ RectTransform:
   - {fileID: 1922698070}
   m_Father: {fileID: 1190344991}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 60, y: -25}
-  m_SizeDelta: {x: 120, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &821683022
 MonoBehaviour:
@@ -9330,7 +9366,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 8ce5e0079794554459fef55788b1a6e5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11781,7 +11817,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181956100}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
   m_Name: 
@@ -11793,7 +11829,7 @@ MonoBehaviour:
     m_Bottom: 0
   m_ChildAlignment: 1
   m_Spacing: 0
-  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
@@ -11849,7 +11885,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0.000030517578}
-  m_SizeDelta: {x: 120, y: 50}
+  m_SizeDelta: {x: 120, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1190344992
 MonoBehaviour:
@@ -13896,10 +13932,10 @@ RectTransform:
   - {fileID: 1872640184}
   m_Father: {fileID: 1181956101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 785.52, y: -232.5}
+  m_SizeDelta: {x: 1571, y: 465}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1394795825
 MonoBehaviour:
@@ -14521,6 +14557,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: GoogleWindow, Assembly-CSharp
         m_MethodName: StateWebPeor
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1181956106}
+        m_TargetAssemblyTypeName: PointManager, Assembly-CSharp
+        m_MethodName: AddNegative
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -15179,10 +15227,10 @@ RectTransform:
   - {fileID: 1452686261}
   m_Father: {fileID: 1181956101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1050.45, y: -697.5}
+  m_SizeDelta: {x: 1041.19, y: 465}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1494921481
 MonoBehaviour:
@@ -15985,7 +16033,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1568608625
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16631,6 +16679,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1181956106}
+        m_TargetAssemblyTypeName: PointManager, Assembly-CSharp
+        m_MethodName: AddPositive
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1606125730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16704,6 +16764,7 @@ MonoBehaviour:
   incorrectSound: {fileID: 8300000, guid: 1fdbdca4fb136994a9f3807f0c8fb7ad, type: 3}
   clickSound: {fileID: 8300000, guid: 5a74dbba1bf38824e83b589ad6997319, type: 3}
   tapSound: {fileID: 8300000, guid: 4772fc99f86bcbd45a1a6d3df7e34828, type: 3}
+  ringTone: {fileID: 8300000, guid: fc319f7bea1783349bac05d96cd66bdd, type: 3}
 --- !u!82 &1642808127
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16892,6 +16953,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1644391055}
   m_CullTransparentMesh: 1
+--- !u!1001 &1648061313
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2889296002868976897, guid: efc67d06bea7a3b43aed929b7d25b143, type: 3}
+      propertyPath: m_Name
+      value: LevelChanger
+      objectReference: {fileID: 0}
+    - target: {fileID: 2889296002868976897, guid: efc67d06bea7a3b43aed929b7d25b143, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774818725535265500, guid: efc67d06bea7a3b43aed929b7d25b143, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 947.8948
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774818725535265500, guid: efc67d06bea7a3b43aed929b7d25b143, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 566.8048
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774818725535265500, guid: efc67d06bea7a3b43aed929b7d25b143, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.82839
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774818725535265500, guid: efc67d06bea7a3b43aed929b7d25b143, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774818725535265500, guid: efc67d06bea7a3b43aed929b7d25b143, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774818725535265500, guid: efc67d06bea7a3b43aed929b7d25b143, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774818725535265500, guid: efc67d06bea7a3b43aed929b7d25b143, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774818725535265500, guid: efc67d06bea7a3b43aed929b7d25b143, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774818725535265500, guid: efc67d06bea7a3b43aed929b7d25b143, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774818725535265500, guid: efc67d06bea7a3b43aed929b7d25b143, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: efc67d06bea7a3b43aed929b7d25b143, type: 3}
+--- !u!114 &1648061314 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4430396160636468212, guid: efc67d06bea7a3b43aed929b7d25b143, type: 3}
+  m_PrefabInstance: {fileID: 1648061313}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abc247a3a1a065e429a9cb89dfff8a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1649422388
 GameObject:
   m_ObjectHideFlags: 0
@@ -17303,6 +17436,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: DownloadButton, Assembly-CSharp
         m_MethodName: DownloadingState
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1181956106}
+        m_TargetAssemblyTypeName: PointManager, Assembly-CSharp
+        m_MethodName: AddPositive
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -26157,7 +26302,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &4184690625493468874
 RectTransform:
@@ -31925,3 +32070,4 @@ SceneRoots:
   - {fileID: 888397786}
   - {fileID: 298367901}
   - {fileID: 1642808128}
+  - {fileID: 1648061313}

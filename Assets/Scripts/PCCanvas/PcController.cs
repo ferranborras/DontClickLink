@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PcController : MonoBehaviour
 {
@@ -27,5 +28,10 @@ public class PcController : MonoBehaviour
                 childScript.Display(child == window);
             }
         }
+    }
+
+    public void EndScene() {
+        Cursor.visible = true;
+        SceneManager.LoadScene("EndScene");
     }
 }

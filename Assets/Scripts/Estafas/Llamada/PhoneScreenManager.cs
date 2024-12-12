@@ -36,11 +36,6 @@ public class PhoneScreenManager : MonoBehaviour
     {
         timer -= Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.L)) //Para activar la llamada en cualquier momento para testear con la L
-        {
-            timer = 0;
-        }
-
         if (timer <= 0 && !ringing)
         {
             GameObject newCallText;

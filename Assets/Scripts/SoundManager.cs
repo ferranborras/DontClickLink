@@ -9,6 +9,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip incorrectSound;
     public AudioClip clickSound;  
     public AudioClip tapSound;
+    public AudioClip ringTone;
 
     void Start()
     {
@@ -34,5 +35,9 @@ public class SoundManager : MonoBehaviour
     public void PlayTapSound()
     {
         audioSource.PlayOneShot(tapSound);
+    }
+
+    public void PlayRingTone() {
+        audioSource.PlayOneShot(ringTone);
     }
 }

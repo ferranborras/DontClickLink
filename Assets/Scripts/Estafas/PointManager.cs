@@ -41,4 +41,12 @@ public class PointManager : MonoBehaviour
             totalBadPoints++;
         }
     }
+
+    public void AddPositive(int index) {
+        AddPoint(true, index);
+    }
+
+    public void AddNegative(int index) {
+        AddPoint(false, index);
+    }
 }
