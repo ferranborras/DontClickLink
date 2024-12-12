@@ -15,10 +15,12 @@ public class PhoneScreenManager : MonoBehaviour
     public Sprite[] callIcons, pixtagramIcons;
     public PointManager pointsTable;
 
+    public GameObject ringingAlert;
+
     bool ringing;
     int callIndex;
     Call newCall;
-    string[] goodCalls = new[] { "Mam·", "Pap·", "Mateo", "Amigo" };
+    string[] goodCalls = new[] { "Mam√°", "Pap√°", "Mateo", "Amigo" };
     string[] fraudCalls = new[] { "+97 4561 28469 129486", "+34 478 965 124", "79846535476" };
 
     // Start is called before the first frame update
@@ -26,6 +28,7 @@ public class PhoneScreenManager : MonoBehaviour
     {
         ResetTimer();
         ringing = false;
+        ringingAlert.SetActive(false);
     }
 
     // Update is called once per frame
@@ -42,6 +45,7 @@ public class PhoneScreenManager : MonoBehaviour
         {
             GameObject newCallText;
             ringing = true;
+            ringingAlert.SetActive(true);
             timer = 10;
             newCall = Instantiate(callScreenPrefab, gameObject.GetComponent<RectTransform>().localPosition, Quaternion.identity);
             newCall.transform.SetParent(GetComponent<RectTransform>());
@@ -81,8 +85,9 @@ public class PhoneScreenManager : MonoBehaviour
 
     public void ResetTimer()
     {
-        timer = Random.Range(120f, 180f);
+        timer = Random.Range(20f, 40f);
         ringing = false;
+        ringingAlert.SetActive(false);
     }
 
     public void ShowDialog(bool fraud)
